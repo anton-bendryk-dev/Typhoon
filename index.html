@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1user-scalable=no" />
+    <meta name="description" content="Интернет – магазин «Генератор «ТАЙФУН»" />
+    <title>Генератор «ТАЙФУН»</title>
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/media.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="inline-wrapper">
+            <header>
+                <a href="/"><img src="./images/download.gif"></a>
+                <div class="inline-header"></div>
+            </header>
+            <main>
+                <section>
+                    <div>
+                        <h2>Регистрация покупателя</h2>
+                        <form action="stranyi/polsha.html" method="post">
+                            <span class="form__input">
+                                <input type="text" name="name" required="" id="name" value=""
+                                    placeholder="Ваше имя">
+                            </span>
+                            <span class="form__input">
+                                <input type="tel" name="phone" required="" placeholder="Ваш телефон"
+                                    class="input-mask" id="phone" value="">
+                            </span>
+                            <div class="btn"><button type="button">Регистрация</button></div>
+                            <img src="./images/kisspng-gold-as-an-investment-foreign-exchange-market-trad-gold-phone-5a9be7cd997032.6118034115201668616285.png">
+                        </form>
+                    </div>
+                    <div>
+                        <div class="btn"><button type="button">Купить</button></div>
+                        <h1>Генератор «Тайфун»</h1>
+                        <p>мощностью от <strong>11% за 72 часа</strong> от потребляемой 
+                            денежной массы, в эквиваленте стоимости 
+                            биткоина на момент покупки генератора.</p>
+                        <h4>Вывод средств  в любое время</h4>
+                        <h2>Гарант - страховка 70% амортизации программного обеспечения</h2>
+                        Картинка товара
+                        <h3>Купить – от 20 евро до 900 евро</h3>
+                    </div>
+                    <div>
+                        <h2>Количество сгенерированных средств</h2>
+                        <p>Сумма</p>
+                        <p style="font-size:20px;font-weight:bold;">50 Евро</p>
+                        <p style="font-size:20px;font-weight:bold;">130%</p>
+                        <p>оборота на текущий день</p>
+                        <img src="./images/gold-bar-png-41022.png">
+                    </div>
+                    <div>
+                        <h3>Принцип работы и условия гарантийного обслуживания</h3>
+                        <h3>О нас</h3>
+                        <h3>Контакты</h3>
+                    </div>
+                    <div><h2>Авторское право</h2>
+                        <h5>Генератор работает, согласно, алгоритма «Тайфун» описанного в книге «Магия чисел в спортивных событиях»</h5>
+                        бложка книги
+                    </div>
+                    <div><h3>Турбонасадка
+                        для
+                        Генератора «Тайфун»
+                        </h3>
+                        <p>Цена</p>
+                        <p>Ежемесячное обновление – 11 у.е.</p>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div>Заказать обратный звонок</div>
+                <div>ВЫВОД СРЕДСТВ</div>
+                <div>БОНУСЫ</div>
+                <button class="scrollToTopBtn"><img width="50px;" src="./images/PngItem_115907.png"></button>
+            </footer>
+        </div>
+    </div>
+    <script>
+        var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
+        var rootElement = document.documentElement
+
+        function handleScroll() {
+            var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+            if ((rootElement.scrollTop / scrollTotal) > 0.20) {
+                scrollToTopBtn.classList.add("showBtn")
+            } else {
+                scrollToTopBtn.classList.remove("showBtn")
+            }
+        }
+
+        function scrollToTop() {
+            rootElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+
+        function slowScroll(id) {
+            var offset = 0;
+            $('html, body').animate({
+                scrollTop: $(id).offset().top - offset
+            }, 1000);
+            return false;
+        }
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+        document.addEventListener("scroll", handleScroll);
+    </script>
+</body>
+
+</html>

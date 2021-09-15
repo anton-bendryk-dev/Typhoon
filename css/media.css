@@ -1,0 +1,20 @@
+@media screen and (max-width: 1366px) {
+  .inline-wrapper {
+    width: 100%;;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inline-wrapper {
+    width: 100%;;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
