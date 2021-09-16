@@ -10,6 +10,12 @@
   header{
     background-size: cover;
   }
+  body {
+    background-color: black !important;
+  }
+  .header{
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
   .inline-wrapper {
@@ -26,4 +32,15 @@
   header {
     min-height: 300px;
   }
+  .user-container{
+    text-align: center;
+  }
+  .user-btn {
+    display: inline-block;
+}
+.bg-user {
+  background-position: bottom;
+  padding-left: 30px;
+  padding-right: 30px;
+}
 }

@@ -14,13 +14,13 @@ body {
   overflow-x: hidden;
   font-family: circe, sans-serif;
   font-style: normal;
+  background-color: #000c;
 }
 
 .wrapper {
   width: 100%;
   margin: 0 auto;
   min-height: 200px;
-  background-color: #000c;
   color: #FFFFFF;
 }
 
@@ -29,7 +29,8 @@ body {
   margin: 0 auto;
   background-color: black;
 }
-button {
+button,
+.btn a {
   padding: 25px 42px;
   font-weight: 500;
   line-height: 20px;
@@ -184,4 +185,42 @@ footer{
 .showBtn {
   opacity: 1;
   transform: translateY(0)
+}
+.bg-user{
+  min-height: 300px;
+  background-position: right;
+  background-image: url("../images/gold.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+.user-btn{
+  width: 300px;
+  text-align: center;
+}
+.btn a {
+  display: block;
+}
+.table{
+  display: grid;
+  grid-template-columns: 250px 250px 500px 100px 150px 100px;
+  align-items: center;
+  justify-content: center;
+}
+.header{
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+.header img {
+  width: 100%;
+}
+.table div {
+  padding: 20px;
+  border: 1px solid #fffe00;
+}
+.inline-wrapper-content {
+  width: 1366px;
+  background-color: black;
 }
