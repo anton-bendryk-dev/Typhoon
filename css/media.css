@@ -5,16 +5,25 @@
   section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  header{
+    background-size: cover;
   }
 }
 @media screen and (max-width: 768px) {
   .inline-wrapper {
     width: 100%;;
   }
-  section {
+  section, .section-footer {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  img{
+    width: 100%;
+  }
+  header {
+    min-height: 300px;
   }
 }

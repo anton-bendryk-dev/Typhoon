@@ -87,21 +87,35 @@ footer,
   display: flex;
 }
 footer,
-section {
+section,
+.section-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
-
-.inline-wrapper {
+.section-footer{
+  min-height: 100px;
+  padding-bottom: 20px;
+}
+.inline-wrapper,
+.section2, 
+.section-footer,
+.section3 {
   align-items: center;
 }
-
+/* .section2{
+  background-position: bottom;
+  background-image: url("../images/top-view-gunny-sack-with-gold-ore.jpg");
+  background-size: 100%;
+} */
 .inline-header,
+.section-footer,
 section {
   justify-content: center;
 }
-
+.section-footer div {
+  text-align: center;
+}
 .inline-wrapper {
   -webkit-box-shadow: 0px 0px 23px 5px #000000; 
   box-shadow: 0px 0px 23px 5px #000000;
@@ -111,11 +125,8 @@ section {
   justify-content: space-around;
 }
 
-.navigation {
-  justify-content: space-between;
-}
-
 header,
+.section2,
 .register,
 .inline-header {
   background-repeat: no-repeat;
