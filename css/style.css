@@ -143,23 +143,27 @@ header {
 
 .inline-header {
   min-height: 300px;
-  background-position: center;
-  background-image: url("../images/giphy2.gif");
-  background-size: contain;
-  background-size: 200px;
-  background-position-y: -32px;
 }
-
+.inline-header img{
+  width: 250px;
+}
 main {
   min-height: 300px;
 }
-
+main section:first-child{
+  align-items: center;
+}
 .form__input input{
   width: 300px;
   border: 1px solid gold;
   background-color: #FFFFFF;
   padding: 10px;
   margin-bottom: 5px;
+}
+.form-container, form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer{
   padding-bottom: 20px;
@@ -181,7 +185,21 @@ footer{
   transform: translateY(100px);
   transition: all .5s ease
 }
-
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.back img{
+  width: 30px;
+}
+.back a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  color: white;
+}
 .showBtn {
   opacity: 1;
   transform: translateY(0)

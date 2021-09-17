@@ -17,24 +17,26 @@
         <div class="inline-wrapper">
             <header>
                 <a href="/"><img src="./images/download.gif"></a>
-                <div class="inline-header"></div>
+                <div class="inline-header">
+                    <img src="./images/giphy2.gif">
+                </div>
             </header>
             <main id="main">
                 <section>
                     <div>
                         <h2>Регистрация покупателя</h2>
-                        <form action="stranyi/polsha.html" method="post">
+                        <form>
                             <span class="form__input">
-                                <input type="text" name="name" required="" id="name" value=""
+                                <input type="text" name="name" class="name" required="" id="name" value=""
                                     placeholder="Ваше имя">
                             </span>
                             <span class="form__input">
                                 <input type="tel" name="phone" required="" placeholder="Ваш телефон"
-                                    class="input-mask" id="phone" value="">
-                            </span>
-                            <div class="btn"><button type="button">Регистрация</button></div>
-                            <img src="./images/kisspng-gold-as-an-investment-foreign-exchange-market-trad-gold-phone-5a9be7cd997032.6118034115201668616285.png">
+                                    class="input-mask phone" id="phone" value="">
+                            </span>  
+                            <div class="btn"><button id="register" type="button">Регистрация</button></div>
                         </form>
+                        <img style="width: 90%;max-width:300px;margin-top: 10px;" src="./images/kisspng-gold-as-an-investment-foreign-exchange-market-trad-gold-phone-5a9be7cd997032.6118034115201668616285.png">
                     </div>
                     <div>
                         <div class="btn"><button type="button">Купить</button></div>
@@ -44,7 +46,7 @@
                             биткоина на момент покупки генератора.</p>
                         <h4>Вывод средств  в любое время</h4>
                         <h2>Гарант - страховка 70% амортизации программного обеспечения</h2>
-                        Картинка товара
+                        <img src="./images/loto_mashin.gif">
                         <h3>Купить – от 20 евро до 900 евро</h3>
                     </div>
                     <div>
@@ -53,7 +55,7 @@
                         <p style="font-size:20px;font-weight:bold;">50 Евро</p>
                         <p style="font-size:20px;font-weight:bold;">130%</p>
                         <p>оборота на текущий день</p>
-                        <img src="./images/gold-bar-png-41022.png">
+                        <img style="width: 90%;max-width:300px;margin-top: 10px;" src="./images/gold-bar-png-41022.png">
                     </div>
                 </section>
                 <div class="section2">
@@ -62,10 +64,11 @@
                             <h3>Принцип работы и условия гарантийного обслуживания</h3>
                             <h3>О нас</h3>
                             <h3>Контакты</h3>
+                            <p>taifunonline7@gmail.com</p>
                         </div>
                         <div><h2>Авторское право</h2>
                             <h5>Генератор работает, согласно, алгоритма «Тайфун» описанного в книге «Магия чисел в спортивных событиях»</h5>
-                            <p>бложка книги</p>
+                            <img style="width: 100%;" src="./images/photo_2021-09-17_15-55-15.jpg">
                             <img src="./images/Lovepik_com-401202582-real-estate-investment.png">
                         </div>
                         <div><h3>Турбонасадка
@@ -84,6 +87,7 @@
                     </div>
                 </div>
             </main>
+            <div class="back"><a href="/"><img src="./images/back.png">Назад</div>
         </div>
     </div>
     <script>
@@ -115,6 +119,50 @@
         }
         scrollToTopBtn.addEventListener("click", scrollToTop);
         document.addEventListener("scroll", handleScroll);
+        let main = document.querySelector("#main");
+        let registerBtn = document.querySelector("#register");
+        function reg() {
+            let name = document.querySelector(".name");
+            let phone = document.querySelector(".phone");
+            let name3 = name.value;
+            let phone3 = phone.value;
+            console.log(name3)
+            console.log(phone3)
+            main.innerHTML = `
+            <div class="form-container">
+                        <h2>Регистрация покупателя</h2>
+                        <form>
+                            <span class="form__input">
+                                <input type="text" name="name" required="" id="name" value=""
+                                    placeholder="Ваше имя">
+                            </span>
+                            <span class="form__input">
+                                <input type="tel" name="phone" required="" placeholder="Ваш телефон"
+                                    class="input-mask" id="phone" value="">
+                            </span>
+                            <span class="form__input">
+                                <input type="mail" name="email" required="" placeholder="Ваш Email"
+                                    class="input-mask" id="phone" value="">
+                            </span>
+                            <span class="form__input">
+                                <input type="password" name="password" required="" placeholder="Ваш пароль"
+                                    class="input-mask" id="phone" value="">
+                            </span>
+                            <p class="form__checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox">согласен с правилами</label>
+                            </p>   
+                            <div class="btn"><button type="button">Регистрация</button></div>
+                        </form>
+                        <img style="width: 90%;max-width:300px;margin-top: 10px;" src="./images/kisspng-gold-as-an-investment-foreign-exchange-market-trad-gold-phone-5a9be7cd997032.6118034115201668616285.png">
+                    </div>
+            `;
+            let name2 = document.querySelector("#name");
+            let phone2 = document.querySelector("#phone");
+            name2.value = name3;
+            phone2.value = phone3;
+        }
+        registerBtn.addEventListener("click", reg);
     </script>
 </body>
 
