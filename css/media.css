@@ -3,9 +3,8 @@
     width: 100%;;
   }
   section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
   header{
     background-size: cover;
@@ -16,15 +15,20 @@
   .header{
     display: block;
   }
+  .section-main div:first-child{
+    order: 2;
+  }
+  .section-main div + div{
+    order: 1;
+  }
 }
 @media screen and (max-width: 768px) {
   .inline-wrapper {
     width: 100%;;
   }
   section, .section-footer {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
   img{
     width: 100%;

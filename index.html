@@ -15,14 +15,15 @@
 <body>
     <div class="wrapper">
         <div class="inline-wrapper">
-            <header>
+            <div class="back"><a href="./index.html"><img src="./images/back.png">Назад</div>
+            <header id="header">
                 <a href="/"><img src="./images/download.gif"></a>
                 <div class="inline-header">
                     <img src="./images/giphy2.gif">
                 </div>
             </header>
             <main id="main">
-                <section>
+                <section class="section-main">
                     <div>
                         <h2>Регистрация покупателя</h2>
                         <form>
@@ -33,18 +34,19 @@
                             <span class="form__input">
                                 <input type="tel" name="phone" required="" placeholder="Ваш телефон"
                                     class="input-mask phone" id="phone" value="">
-                            </span>  
+                            </span>
                             <div class="btn"><button id="register" type="button">Регистрация</button></div>
                         </form>
-                        <img style="width: 90%;max-width:300px;margin-top: 10px;" src="./images/kisspng-gold-as-an-investment-foreign-exchange-market-trad-gold-phone-5a9be7cd997032.6118034115201668616285.png">
+                        <img style="width: 90%;max-width:300px;margin-top: 10px;"
+                            src="./images/kisspng-gold-as-an-investment-foreign-exchange-market-trad-gold-phone-5a9be7cd997032.6118034115201668616285.png">
                     </div>
                     <div>
                         <div class="btn"><button type="button">Купить</button></div>
                         <h1>Генератор «Тайфун»</h1>
-                        <p>мощностью от <strong>11% за 72 часа</strong> от потребляемой 
-                            денежной массы, в эквиваленте стоимости 
+                        <p>мощностью от <strong>11% за 72 часа</strong> от потребляемой
+                            денежной массы, в эквиваленте стоимости
                             биткоина на момент покупки генератора.</p>
-                        <h4>Вывод средств  в любое время</h4>
+                        <h4>Вывод средств в любое время</h4>
                         <h2>Гарант - страховка 70% амортизации программного обеспечения</h2>
                         <img src="./images/loto_mashin.gif">
                         <h3>Купить – от 20 евро до 900 евро</h3>
@@ -60,34 +62,41 @@
                 </section>
                 <div class="section2">
                     <section class="section3">
-                        <div>
-                            <h3>Принцип работы и условия гарантийного обслуживания</h3>
-                            <h3>О нас</h3>
-                            <h3>Контакты</h3>
+                        <div class="navigation">
+                            <h3 class="garants" onclick="slowScroll('#header')">Принцип работы и условия гарантийного обслуживания</h3>
+                            <h3 class="aboutUs" onclick="slowScroll('#header')">О нас</h3>
+                            <h4>Контакты</h4>
                             <p>taifunonline7@gmail.com</p>
                         </div>
-                        <div><h2>Авторское право</h2>
-                            <h5>Генератор работает, согласно, алгоритма «Тайфун» описанного в книге «Магия чисел в спортивных событиях»</h5>
-                            <img style="width: 100%;" src="./images/photo_2021-09-17_15-55-15.jpg">
+                        <div>
+                            <h2 class="center">Авторское право</h2>
+                            <h5>Генератор работает, согласно, алгоритма «Тайфун» описанного в книге «Магия чисел в
+                                спортивных событиях»</h5>
+                            <p><img style="width: 100%; max-width: 300px;" src="./images/photo_2021-09-17_15-55-15.jpg">
+                            </p>
                             <img src="./images/Lovepik_com-401202582-real-estate-investment.png">
                         </div>
-                        <div><h3>Турбонасадка
-                            для
-                            Генератора «Тайфун»
+                        <div>
+                            <h3>Турбонасадка
+                                для
+                                Генератора «Тайфун»
                             </h3>
                             <p>Цена</p>
                             <p>Ежемесячное обновление – 11 у.е.</p>
                         </div>
                     </section>
                     <div class="section-footer">
-                        <div class="btn"><button type="button" onclick="slowScroll('#main')">Обратный звонок</button></div>
-                        <div class="btn"><button type="button" onclick="slowScroll('#main')">ВЫВОД СРЕДСТВ</button></div>
-                        <div class="btn"><button type="button" onclick="slowScroll('#main')">БОНУСЫ</button></div>
+                        <div class="btn"><button type="button" onclick="slowScroll('#main')">Обратный звонок</button>
+                        </div>
+                        <div class="btn"><button type="button" onclick="slowScroll('#main')">ВЫВОД СРЕДСТВ</button>
+                        </div>
+                        <div class="btn"><button type="button" onclick="slowScroll('#header')" class="bonuses">БОНУСЫ</button></div>
                         <button class="scrollToTopBtn"><img width="50px;" src="./images/PngItem_115907.png"></button>
                     </div>
+                    
                 </div>
             </main>
-            <div class="back"><a href="/"><img src="./images/back.png">Назад</div>
+            
         </div>
     </div>
     <script>
@@ -121,13 +130,17 @@
         document.addEventListener("scroll", handleScroll);
         let main = document.querySelector("#main");
         let registerBtn = document.querySelector("#register");
+        let backBtn = document.querySelector(".back");
+        let bonusesBtn = document.querySelector(".bonuses");
+        let garantsBtn = document.querySelector(".garants");
+        let aboutUsBtn = document.querySelector(".aboutUs");
+
         function reg() {
             let name = document.querySelector(".name");
             let phone = document.querySelector(".phone");
             let name3 = name.value;
+            backBtn.style.display = "block";
             let phone3 = phone.value;
-            console.log(name3)
-            console.log(phone3)
             main.innerHTML = `
             <div class="form-container">
                         <h2>Регистрация покупателя</h2>
@@ -163,6 +176,78 @@
             phone2.value = phone3;
         }
         registerBtn.addEventListener("click", reg);
+
+        function bonuses() {
+            backBtn.style.display = "block";
+            main.innerHTML = `
+                    <div class="content-container">
+                        <h3>
+                            Администрация интерент-магазина <strong>«ТАЙФУН»</strong> 
+                            проводит акции для постоянных своих покупателей в виде начисления бонусных средств на баланс  в личном кабинете покупателя, которые можно также обналичить. Размер предоставляемого бонуса равен
+                             7% от суммы покупок за последние три месяца календарного года.
+                            </h3>
+                            <img style="width: 100%;max-width:320px;" src="./images/gold.png">
+                    </div>
+            `;
+        };
+        bonusesBtn.addEventListener("click", bonuses);
+
+        function garants() {
+            backBtn.style.display = "block";
+            main.innerHTML = `
+                    <div class="content-container">
+                        <div>
+                            <h3>ПРИНЦИП РАБОТЫ ГЕНЕРАТОРА И ГАРАНТИЙНОЕ ОБСЛУЖИВАНИЕ</h3>
+                        <p>Программное обеспечение генератора <strong>«ТАЙФУН»</strong>  дает возможность совершать от 10 до 100 мини циклов алгоритма <strong>«ТАЙФУН»</strong>  за 72 часа определенными денежными массами.</p>
+                        <p>Таким образом, движение денежных масс, в рисковых высокодоходных операциях, генерируют денежную массу, аккумулирующейся в личном кабинете  покупателя  в евровом эквиваленте.</p>
+                        <p>Вывод осуществляется в биткоинах на криптокошелек покупателя генератора <strong>«ТАЙФУН»</strong> 7 раз через каждые 72 часа в любое время в течении лунного месяца, в размере от 11% от стоимости самого генератора <strong>«ТАЙФУН»</strong>. По истечении лунного месяца 28 дней начинается новый цикл, состоящий из 7 мини циклов работы генератора. </p>
+                        <p>При выводе средств, с баланса личного кабинета пользователя взымается комиссия, а именно авторский гонорар в размере 11%, от суммы вывода по факту.</p>
+                        <p>Стоимость варьирует от 20 до 900 евро, а именно: 20, 50, 100, 200, 500, 900 евро за одну единицу.</p>
+                        <p>Вывод возможен, как части суммы, так и всей суммы начальной стоимости генератора одной транзакцией.</p>
+                        <p>При определенных форс-мажорных обстоятельствах неисправности или технических сбоев, интернет-магазин <strong>«ТАЙФУН»</strong> обязуется возместить стоимость генератора покупателю в размере 70% от его начальной стоимости в евро на его криптокошелек.</p>
+                        <p>Покупка генератора <strong>«ТАЙФУН»</strong> осуществляется в евро по курсу биткоина на момент покупки.</p>
+                        <p>Гарантийный срок эксплуатации – 12 месяцев.</p>
+                        <p>Создатели генератора <strong>«ТАЙФУН»</strong>, а также администрация интернет-магазина <strong>«ТАЙФУН»</strong> желает своим покупателям финансовой стабильности и процветания.</p>
+                        </div>
+                    </div>
+            `;
+        };
+        garantsBtn.addEventListener("click", garants);
+
+        function aboutUs() {
+            backBtn.style.display = "block";
+            main.innerHTML = `
+                    <div class="content-container">
+                        <div>
+                            <p>Дорогие читатели данной книги, а также люди, которые приобрели <strong>генератор «ТАЙФУН»</strong> и успешно зарабатывают деньги. Алчность всегда губила людей. Большинство игроков теряют деньги в силу своей алчности и жадности, а также некоторых технических тонкостей гениального продукта Интернет-технологии. </p>
+                            <p>При использовании указанного алгоритма <strong>«ТАЙФУН»</strong>, а также его модификации,  Вы  действительно сможете заработать от 22% в неделю, если Вас не одолеет алчность и жадность. Каким образом? Поехали.</p>
+                            <p>Начнем с момента завода средств на счет в любой букмекерской конторе. Необходимо внимательно прочитать условия данной букмекерской конторы, условий ввода и вывода средств, размера минимальной и максимальной ставки.</p>
+                            <p>Изучив внимательно данные аспекты можно заводить средства, желательно для этого иметь отдельную дебитовую карту платежной системы виза. </p>
+                            <p>Размер минимального шага равен 1% от суммы Ваших инвестиций. Инвестиция – это сумма денег, доступная для оборота на данном счете в букмекерской конторе, которая находится на балансе дебитовой карты, определенной для работы. </p>
+                            <p>Средний коэффициент ставки должен быть не менее 2.5</p>
+                            <p>Пример:</p>
+                            <p>Ставка №1 = 3$ Х 2.5 = 7.5$</p>
+                            <p>Ставка №2 = 7.5 Х2.5 = 18.75$</p>
+                            <p>Чистая прибыль = 18.75 – 10.5= 8.25$</p>
+                            <p>Если ставка №1 не играет, тогда ставка №2 равна 9$.</p>
+                            <p>Если не играет ставка №2, тогда номинал следующей увеличивается, согласно алгоритма <strong>«ТАЙФУН»</strong>, изложенного в книге «Магия чисел в спортивных событиях».</p>
+                            <p>При первом удачном исходе умножается на минимум 2.5 еще раз.</p>
+                            <p>Пример самого страшного провала в количестве из 11 ставок с отрицательным исходом:</p>
+                            <p>3 – 9 – 21 – 9 – 13.5 – 13.5  – 31 – 31  - 36 – 54 -54  – 126 – 126</p>
+                            <h3>
+                                Затраты: <strong>527$</strong>
+                            </h3>
+                            <h3>
+Результат: 126 Х 2,5 = 315 х 2 = 630$
+                            </h3>
+                            <h3>
+Прибыль: 103$
+                            </h3>
+                        <div>
+                    </div>
+            `;
+        };
+        aboutUsBtn.addEventListener("click", aboutUs);
     </script>
 </body>
 

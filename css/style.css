@@ -46,6 +46,8 @@ button,
   background-position:bottom;
   background-repeat:no-repeat;
   background-size:contain;
+  min-width: 300px;
+  text-align: center;
 }
 button:hover {
   font-size: 22px;
@@ -64,7 +66,6 @@ h1 {
   line-height: 110.6%;
   letter-spacing: 0.5px;
   color: #FFFFFF;
-  max-width: 757px;
 }
 
 section,
@@ -153,6 +154,11 @@ main {
 main section:first-child{
   align-items: center;
 }
+.navigation h3:hover{
+  color: grey;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
 .form__input input{
   width: 300px;
   border: 1px solid gold;
@@ -189,6 +195,8 @@ footer{
   position: absolute;
   top: 20px;
   left: 20px;
+  display: none;
+  z-index: 20;
 }
 .back img{
   width: 30px;
@@ -241,4 +249,10 @@ footer{
 .inline-wrapper-content {
   width: 1366px;
   background-color: black;
+}
+.content-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
