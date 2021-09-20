@@ -26,7 +26,7 @@
   .inline-wrapper {
     width: 100%;;
   }
-  section, .section-footer {
+  section, .section-footer, .content-container {
     display: flex;
     flex-direction: column;
   }
